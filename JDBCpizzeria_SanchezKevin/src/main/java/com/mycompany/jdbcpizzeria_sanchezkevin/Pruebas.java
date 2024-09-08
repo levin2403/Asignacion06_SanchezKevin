@@ -34,6 +34,8 @@ public class Pruebas {
             producto.agregar(producto2);
             producto.agregar(producto3);
             
+            producto.eliminar(producto1);
+            System.out.println("El producto con id igual a 1 a sido eliminado \n");
             
             System.out.println("Productos agregados correctamente \n");
             
@@ -42,15 +44,7 @@ public class Pruebas {
             System.out.println("El metodo de agregar ha fallado\n");
         }
         
-        //Eliminamos un producto.
-        try{
-            producto.eliminar(1);
-            System.out.println("El producto con id igual a 1 a sido eliminado \n");
-        }
-        catch(Exception ex){
-            System.out.println("El metodo de eliminar producto a fallado \n");
-        }
-        
+           
         //Consultamos por id.
         try{
             System.out.println(producto.consultar(2).toString());

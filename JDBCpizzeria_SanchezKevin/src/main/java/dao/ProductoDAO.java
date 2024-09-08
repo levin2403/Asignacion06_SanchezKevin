@@ -29,7 +29,7 @@ public class ProductoDAO implements IProductoDAO{
     
     
     @Override
-    public void agregar(Producto producto) {
+    public void agregar(Producto producto) throws SQLException{
         String consulta = "INSERT INTO productos (nombre, precio, descripcion) VALUES(?,?,?)";
 
         try (Connection bd = conexion.crearConexion();
@@ -47,24 +47,30 @@ public class ProductoDAO implements IProductoDAO{
     }
 
     @Override
-    public void eliminar(int id) {
+    public void eliminar(Producto producto) throws SQLException {
         String eliminar = "DELETE FROM productos WHERE id = ?";
 
-        try {
-            PreparedStatement eliminacion = conexion.crearConexion().prepareStatement(eliminar);
-            eliminacion.setInt(1, id);
+        // Utilizar try-with-resources para manejar la conexión y el PreparedStatement
+        try (Connection conn = conexion.crearConexion();
+             PreparedStatement eliminacion = conn.prepareStatement(eliminar)) {
+
+            // Establecer el valor del parámetro en la consulta
+            eliminacion.setInt(1, producto.getId());
+
+            // Ejecutar la actualización (DELETE)
+            eliminacion.executeUpdate();
 
         } catch (SQLException ex) {
-            ex.printStackTrace(); 
+            // Manejo de excepciones
+            ex.printStackTrace();
+            throw ex; // Lanza la excepción si es necesario manejarla en otro lugar
         }
-
-         
     }
 
 
     @Override
-    public void actualizar(Producto producto) {
-        String actualizar = "UPDATE productos SET nombre = ?, precio = ?, descripcion = ? WHERE id = ?";
+    public void actualizar(Producto producto) throws SQLException{
+        String actualizar = "UPDATE productos SET nombre = ?, precio = ?, descripcion = ? WHERE nombre = ?";
 
         try {
             PreparedStatement actualizacion = conexion.crearConexion().prepareStatement(actualizar);
@@ -72,7 +78,7 @@ public class ProductoDAO implements IProductoDAO{
             actualizacion.setString(1, producto.getNombre());
             actualizacion.setBigDecimal(2, producto.getPrecio());
             actualizacion.setString(3, producto.getDescripcion());
-            actualizacion.setInt(4, producto.getId());
+            actualizacion.setString(4, producto.getNombre());
 
         } catch (SQLException ex) {
             ex.printStackTrace(); 
@@ -81,7 +87,7 @@ public class ProductoDAO implements IProductoDAO{
 
 
     @Override
-    public Producto consultar(int id) {
+    public Producto consultar(int id) throws SQLException{
         String consulta = "SELECT * FROM productos WHERE id = ?";
 
         try {
@@ -107,7 +113,7 @@ public class ProductoDAO implements IProductoDAO{
 
 
     @Override
-    public List<Producto> consultarTodos() {
+    public List<Producto> consultarTodos() throws SQLException{
         String consulta = "SELECT * FROM productos";
         List<Producto> productos = new ArrayList<>();
 

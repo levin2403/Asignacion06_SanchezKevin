@@ -5,6 +5,7 @@
 package interfaces;
 
 import entidades.Producto;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -13,10 +14,10 @@ import java.util.List;
  */
 public interface IProductoDAO {
     
-    public void agregar(Producto producto);
-    public void eliminar(int id);
-    public void actualizar(Producto producto);
-    public Producto consultar(int id);
-    public List<Producto> consultarTodos(); 
+    public void agregar(Producto producto) throws SQLException;
+    public void eliminar(Producto producto)throws SQLException;
+    public void actualizar(Producto producto) throws SQLException;
+    public Producto consultar(int id) throws SQLException;
+    public List<Producto> consultarTodos() throws SQLException; 
     
 }
