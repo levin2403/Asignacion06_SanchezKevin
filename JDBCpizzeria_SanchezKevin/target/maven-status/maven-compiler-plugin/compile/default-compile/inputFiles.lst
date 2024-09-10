@@ -1,7 +1,9 @@
-C:\Users\skevi\Documents\NetBeansProjects\JDBCpizzeria_SanchezKevin\src\main\java\interfaces\IConexion.java
-C:\Users\skevi\Documents\NetBeansProjects\JDBCpizzeria_SanchezKevin\src\main\java\dao\Conexion.java
-C:\Users\skevi\Documents\NetBeansProjects\JDBCpizzeria_SanchezKevin\src\main\java\dao\ProductoDAO.java
-C:\Users\skevi\Documents\NetBeansProjects\JDBCpizzeria_SanchezKevin\src\main\java\com\mycompany\jdbcpizzeria_sanchezkevin\Pruebas.java
-C:\Users\skevi\Documents\NetBeansProjects\JDBCpizzeria_SanchezKevin\src\main\java\com\mycompany\jdbcpizzeria_sanchezkevin\JDBCpizzeria_SanchezKevin.java
-C:\Users\skevi\Documents\NetBeansProjects\JDBCpizzeria_SanchezKevin\src\main\java\entidades\Producto.java
-C:\Users\skevi\Documents\NetBeansProjects\JDBCpizzeria_SanchezKevin\src\main\java\interfaces\IProductoDAO.java
+C:\Users\skevi\Documents\GitHub\Asignacion06_SanchezKevin\JDBCpizzeria_SanchezKevin\src\main\java\dao\ProductoDAO.java
+C:\Users\skevi\Documents\GitHub\Asignacion06_SanchezKevin\JDBCpizzeria_SanchezKevin\src\main\java\entidades\Producto.java
+C:\Users\skevi\Documents\GitHub\Asignacion06_SanchezKevin\JDBCpizzeria_SanchezKevin\src\main\java\interfaces\IConexion.java
+C:\Users\skevi\Documents\GitHub\Asignacion06_SanchezKevin\JDBCpizzeria_SanchezKevin\src\main\java\presentacion\ProductosForm.java
+C:\Users\skevi\Documents\GitHub\Asignacion06_SanchezKevin\JDBCpizzeria_SanchezKevin\src\main\java\com\mycompany\jdbcpizzeria_sanchezkevin\JDBCpizzeria_SanchezKevin.java
+C:\Users\skevi\Documents\GitHub\Asignacion06_SanchezKevin\JDBCpizzeria_SanchezKevin\src\main\java\interfaces\IProductoDAO.java
+C:\Users\skevi\Documents\GitHub\Asignacion06_SanchezKevin\JDBCpizzeria_SanchezKevin\src\main\java\com\mycompany\jdbcpizzeria_sanchezkevin\Pruebas.java
+C:\Users\skevi\Documents\GitHub\Asignacion06_SanchezKevin\JDBCpizzeria_SanchezKevin\src\main\java\dao\Conexion.java
+C:\Users\skevi\Documents\GitHub\Asignacion06_SanchezKevin\JDBCpizzeria_SanchezKevin\src\main\java\negocio\ProductoBO.java

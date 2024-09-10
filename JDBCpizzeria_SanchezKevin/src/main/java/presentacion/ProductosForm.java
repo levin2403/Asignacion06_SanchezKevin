@@ -307,19 +307,18 @@ public class ProductosForm extends javax.swing.JFrame {
 
             this.btnEliminar.setVisible(true);
             this.btnActualizar.setVisible(true);
-        } else {
-            // Si no hay ninguna fila seleccionada, mostrar los botones "Cancelar" y "Agregar"
-            this.btnCancelar.setVisible(true);
-            this.btnAgregar.setVisible(true);
-
-            this.btnEliminar.setVisible(false);
-            this.btnActualizar.setVisible(false);
-        }
+        } 
         
     }//GEN-LAST:event_tblProductosMouseClicked
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         this.tblProductos.clearSelection();
+        
+        this.btnCancelar.setVisible(true);
+            this.btnAgregar.setVisible(true);
+
+            this.btnEliminar.setVisible(false);
+            this.btnActualizar.setVisible(false);
     }//GEN-LAST:event_jPanel1MouseClicked
 
     /**
